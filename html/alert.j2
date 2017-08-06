@@ -13,14 +13,14 @@
 </head>
 <body>
   <div class="container-fluid">
-    <h1>Bun Alert</h1>
+    <img src="static/bunalertlogo.png" alt="Bun Alert" />
     {% if alert_result %}
     <h2>{{ alert_result }}</h2>
     {% endif %}
     <p>Spotted a Bun? Send an Alert!</p>
     <form action="dev/alert" method="POST">
-      <input type="text" name="alert_message" placeholder="Spotted at the intersection of 35th St and Wallingford St!" size="80"/><br />
-      <input type="submit" value="Publish Bun Location Description" />
+      <p><input type="text" name="alert_message" placeholder="Spotted at 35th and Wallingford St!" size="35"/><br /></p>
+      <p><input type="submit" value="Publish Bun Location Description" /></p>
     </form>
   </div>
 </body>
