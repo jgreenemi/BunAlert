@@ -1,0 +1,16 @@
+<html>
+<head>
+<title>Bun Alert</title>
+</head>
+<body>
+  <h1>Bun Alert</h1>
+  {% if alert_result %}
+  <h2>{{ alert_result }}</h2>
+  {% endif %}
+  <p>Spotted a Bun? Send an Alert!</p>
+  <form action="dev/alert" method="POST">
+    <input type="text" name="alert_message" placeholder="Spotted at the intersection of 35th St and Wallingford St!" size="80"/><br />
+    <input type="submit" value="Publish Bun Location Description" />
+  </form>
+</body>
+</html>
