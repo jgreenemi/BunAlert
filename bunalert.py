@@ -17,6 +17,10 @@ logger.setLevel(logging.INFO)
 
 @app.route('/')
 def index():
+    """
+    This is the main index page function. Nothing fancy here.
+    :return: A tuple of an HTML page and an HTTP Status code.
+    """
     logging.info('index page started.')
     template = Environment(loader=FileSystemLoader('html/')).get_template('index.j2')
     page = template.render()
@@ -27,6 +31,11 @@ def index():
 @app.route('/subscribe', methods=['POST'])
 @app.route('/dev/subscribe', methods=['POST'])
 def subscribe():
+    """
+    This is the function for handling subscription requests. It will error clearly if a new phone number wasn't passed
+    in when the page was requested.
+    :return: A tuple of an HTML page and an HTTP Status code.
+    """
     logging.info('subscribe page started.')
     try:
         form_response = request.form
@@ -59,6 +68,7 @@ def subscribe():
         page = template.render(subscriber_number=subscriber_number)
         logging.info('subscribe page returned.')
         return page, 200
+
     except Exception as e:
         logging.info('subscribe page errored.')
         page = 'Something went wrong! Exception: {}'.format(e)
@@ -69,6 +79,12 @@ def subscribe():
 @app.route('/alert', methods=['GET', 'POST'])
 @app.route('/dev/alert', methods=['GET', 'POST'])
 def alert():
+    """
+    This is a function with two responsibilities: for providing the form for publishing a new alert to the SNS Topic,
+    and also for confirming that the new alert was published successfully.
+
+    :return: A tuple of an HTML page and an HTTP Status code.
+    """
     logging.info('alert page started.')
     if request.method == 'POST':
         logger.info('alert page POST requested.')

@@ -1,16 +1,27 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Bun Alert</title>
+  <title>Bun Alert</title>
+
+  <!-- Boostrap -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <!-- Make sure we're set for mobile rendering. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
 </head>
 <body>
-  <h1>Bun Alert</h1>
-  {% if alert_result %}
-  <h2>{{ alert_result }}</h2>
-  {% endif %}
-  <p>Spotted a Bun? Send an Alert!</p>
-  <form action="dev/alert" method="POST">
-    <input type="text" name="alert_message" placeholder="Spotted at the intersection of 35th St and Wallingford St!" size="80"/><br />
-    <input type="submit" value="Publish Bun Location Description" />
-  </form>
+  <div class="container-fluid">
+    <h1>Bun Alert</h1>
+    {% if alert_result %}
+    <h2>{{ alert_result }}</h2>
+    {% endif %}
+    <p>Spotted a Bun? Send an Alert!</p>
+    <form action="dev/alert" method="POST">
+      <input type="text" name="alert_message" placeholder="Spotted at the intersection of 35th St and Wallingford St!" size="80"/><br />
+      <input type="submit" value="Publish Bun Location Description" />
+    </form>
+  </div>
 </body>
 </html>
