@@ -1,6 +1,7 @@
 import boto3
 import logging
 import phonenumbers
+from flask import abort
 from flask import Flask
 from flask import request
 from jinja2 import Environment
@@ -85,6 +86,20 @@ def alert():
 
     :return: A tuple of an HTML page and an HTTP Status code.
     """
+
+    # If the page is being requested from an IP address other than one of the whitelist, return a 403.
+    whitelist = [
+        '127.0.0.1',
+        '192.168.1.54',
+        '73.97.190.140',
+        '166.176.185.22'
+    ]
+
+    if request.remote_addr not in whitelist:
+        abort(403, 'IP address {} forbidden.'.format(request.remote_addr))
+    else:
+        logger.info('alert page opened from IP address {}.'.format(request.remote_addr))
+
     logging.info('alert page started.')
     if request.method == 'POST':
         logger.info('alert page POST requested.')
