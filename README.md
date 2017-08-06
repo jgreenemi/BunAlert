@@ -9,6 +9,17 @@ Based on XKCD webcomic #1871, this will be an alert system, relying on AWS SNS, 
 - Enable scheduled "Do Not Disturb" hours.
 - Include Bun rank. This will need to be better defined before implementation.
 
+### Deployment
+
+```
+# The initial deployment is done with:
+$ zappa deploy dev
+
+# That makes a lot of resources in your AWS account (Lambda, API Gateway, etc.).
+# Update it with:
+$ zappa update dev
+```
+
 ### Reference
 
 - [XKCD Webcomic #1682: Bun](https://xkcd.com/1682/)

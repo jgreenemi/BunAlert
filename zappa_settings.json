@@ -1,0 +1,6 @@
+{
+  "dev": {
+    "s3_bucket": "bunalert",
+    "app_function": "bunalert.app"
+  }
+}
