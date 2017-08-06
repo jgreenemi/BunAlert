@@ -92,6 +92,7 @@ def alert():
             template = Environment(loader=FileSystemLoader('html/')).get_template('alert.j2')
             page = template.render(alert_result='Alert message published successfully!')
             logging.info('alert page returned.')
+            return page, 200
 
         except Exception as e:
             logging.info('alert page errored.')
