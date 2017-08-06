@@ -2,7 +2,9 @@
 
 ![Bun Alert Logo](https://github.com/jgreenemi/BunAlert/raw/master/static/bunalertlogo.png)
 
-Based on XKCD webcomic #1871, this is an alert system, relying on AWS SNS, to notify subscribers of the existence of a Bun.
+Based on XKCD webcomic #1871, this is an alert system, relying on AWS SNS, to notify subscribers of the existence of a Bun. A live demo is available at:
+
+https://bunalert.jgreenemi.com/
 
 ### Existing Features
 
