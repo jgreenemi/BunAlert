@@ -6,12 +6,14 @@ Based on XKCD webcomic #1871, this is an alert system, relying on AWS SNS, to no
 
 https://bunalert.jgreenemi.com/
 
+The build details on this project are covered in [the "Bun Alert: An Afternoon XKCD Project" blog post.](https://jgreenemi.com/bun-alert-an-afternoon-xkcd-project/)
+
 ### Existing Features
 
 - Subscribe for push notifications on your mobile device for the existence of a Bun. 
 - Alerts include a general location description.
 
-### Planned Features
+### Possible Future Features
 
 - Include photo with notification. If not possible, a Bun emoji will suffice.
 - Include location coordinates for the Bun, in case subscriber is nearby and wishes to see the Bun.
