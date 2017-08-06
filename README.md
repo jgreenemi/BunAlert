@@ -2,7 +2,7 @@
 
 Based on XKCD webcomic #1871, this will be an alert system, relying on AWS SNS, to notify subscribers of the existence of a Bun.
 
-### Features 
+### Features
 - Subscribe for push notifications on your mobile device for the existence of a Bun.
 - Include photo with notification. If not possible, a Bun emoji will suffice.
 - Include location coordinates for the Bun, in case subscriber is nearby and wishes to see the Bun.
