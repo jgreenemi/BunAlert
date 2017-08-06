@@ -17,11 +17,12 @@
     {% if alert_result %}
     <h2>{{ alert_result }}</h2>
     {% endif %}
-    <p>Spotted a Bun? Send an Alert!</p>
-    <form action="dev/alert" method="POST">
+    <p>Spotted a Bun? Where did you spot it?</p>
+    <form action="alert" method="POST">
       <p><input type="text" name="alert_message" placeholder="Spotted at 35th and Wallingford St!" size="35"/><br /></p>
-      <p><input type="submit" value="Publish Bun Location Description" /></p>
+      <p><input type="submit" value="Publish Bun Location Alert" /></p>
     </form>
+    <p>Your alert will look similar to the following: <em>Bun Alert> A Bun has been spotted! [alert_message goes here]</em></p>
   </div>
 </body>
 </html>

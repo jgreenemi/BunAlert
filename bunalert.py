@@ -117,7 +117,7 @@ def alert():
                 region_name='us-west-2'
             )
 
-            snsclient.publish(Message='Bun Alert Update: A Bun has been spotted! {}'.format(alert_message), TopicArn=topic_arn)
+            snsclient.publish(Message='A Bun has been spotted! {}'.format(alert_message), TopicArn=topic_arn)
 
             # If all's well, return to the alert page with success message.
             template = Environment(loader=FileSystemLoader('html/')).get_template('alert.j2')
