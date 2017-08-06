@@ -24,3 +24,4 @@ $ zappa update dev
 
 - [XKCD Webcomic #1682: Bun](https://xkcd.com/1682/)
 - [XKCD Webcomic #1871: Bun Alert](https://xkcd.com/1871/)
+- [https://www.gun.io/blog/serverless-microservices-with-zappa-and-flask](https://www.gun.io/blog/serverless-microservices-with-zappa-and-flask)

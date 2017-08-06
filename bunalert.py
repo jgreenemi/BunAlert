@@ -1,3 +1,4 @@
+import boto3
 from flask import Flask
 from flask import request
 from jinja2 import Environment
@@ -21,6 +22,21 @@ def subscribe():
         subscriber_number = form_response['subscriber_number']
         if not subscriber_number:
             raise Exception('No subscriber number was passed in!')
+
+        # Try to subscribe the number.
+        topic_arn = 'arn:aws:sns:us-west-2:277012880214:BunAlert'
+        snsclient = boto3.client(
+            'sns',
+            region_name='us-west-2'
+        )
+
+        subscribe_response = snsclient.subscribe(
+            TopicArn=topic_arn,
+            Protocol='sms',
+            Endpoint='{}'.format(subscriber_number)
+        )
+
+        # If all's good, render the response page.
         template = Environment(loader=FileSystemLoader('html/')).get_template('subscribe.j2')
         page = template.render(subscriber_number=subscriber_number)
         return page, 200
