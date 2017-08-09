@@ -22,6 +22,16 @@ The build details on this project are covered in [the "Bun Alert: An Afternoon X
 
 ### Deployment Notes
 
+Set up your local environment with:
+
+```
+$ git clone https://github.com/jgreenemi/BunAlert.git
+$ cd BunAlert
+$ virtual env
+$ source env/bin/activate
+(env) $ pip install -r requirements
+```
+
 Pushing the code: 
 
 ```
