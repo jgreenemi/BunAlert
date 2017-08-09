@@ -32,6 +32,16 @@ $ source env/bin/activate
 (env) $ pip install -r requirements
 ```
 
+Deploying the package: 
+
+```
+$ git clone https://github.com/jgreenemi/BunAlert.git
+$ cd BunAlert
+$ virtual env
+$ source env/bin/activate
+(env) $ pip install -r requirements
+```
+
 Pushing the code: 
 
 ```
