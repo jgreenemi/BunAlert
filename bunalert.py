@@ -90,9 +90,6 @@ def alert():
     # If the page is being requested from an IP address other than one of the whitelist, return a 403.
     whitelist = [
         '127.0.0.1',
-        '192.168.1.54',
-        '73.97.190.140',
-        '166.176.185.22'
     ]
 
     if request.remote_addr not in whitelist:
