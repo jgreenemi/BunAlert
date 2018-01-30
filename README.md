@@ -8,6 +8,8 @@ https://bunalert.jgreenemi.com/
 
 The build details on this project are covered in [the "Bun Alert: An Afternoon XKCD Project" blog post.](https://jgreenemi.com/bun-alert-an-afternoon-xkcd-project/)
 
+**Please note that as of 2018/01/29 the live implementation of Bun Alert is not being used to send out alerts, so if you never get any messages do not be surprised. All subscribers have been removed from the service while it is no longer actively in use. This may change at any time in the future.**
+
 ### Existing Features
 
 - Subscribe for push notifications on your mobile device for the existence of a Bun. 
